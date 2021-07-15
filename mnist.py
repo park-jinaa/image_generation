@@ -61,7 +61,7 @@ input_size_width = x_train.shape[1]
 input_size_height = x_train.shape[2]
 
 def create_model():
-  input_=layers.Input(shape=(input_size_width,input_size_height))
+  input_=layers.Input(shape=(input_size_width, input_size_height))
   x = layers.Flatten()(input_)
   x = layers.Dense(100, activation='relu')(x)
   x = layers.Dense(30, activation='relu')(x)
@@ -119,7 +119,7 @@ history = model.fit(x=x_train, y=y_train, batch_size=128, epochs=50, validation_
 model.evaluate(x_test, y_test, batch_size=64)
 
 
-
+#%%
 #LearningRateScheduler를 이용한 learning rate 조정
 def scheduler(epoch, lr):
   if epoch < 5:
@@ -140,12 +140,13 @@ history= model.fit(x=x_train, y=y_train,
 
 model.evaluate(x_test, y_test, batch_size=64)
 
+#%%
+'''step'''
 
 
+#%%
+'''cosine'''
 
 
-
-
-
-
+#%%
 
