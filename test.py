@@ -34,3 +34,44 @@ for _ in range(30):
     print(np.sum(gradient[0].numpy()))
     optimizer.apply_gradients(zip(gradient, model.trainable_variables))
 #%%
+
+import numpy as np
+import math
+
+N=100000000
+# x = np.random.normal(loc=0, scale=0.2, size=(n, 1))
+z = np.random.normal(0,1,N)
+w = np.exp(-0.5 * z**2) / (np.sqrt(2 * math.pi) * np.exp(-(z-4)))
+np.mean(w)
+# %%
+import numpy as np
+np.random.seed(1)
+p = 2
+true_beta = np.array([[1], [0.5]])
+n = 1000
+x = np.random.normal(loc=0, scale=0.2, size=(n, 1))
+x = np.hstack((np.ones((n, 1)), x))
+x[:5, :]
+# 모수값을 계산하고 poisson 분포를 이용해 y를 생성
+parm = np.exp(x @ true_beta)
+parm[:5, :]
+y = np.random.poisson(parm)
+y[:5, :]
+
+
+#%%
+N = 100000
+y = 0
+for i in range(N):
+    z=-np.log(np.random.uniform())+4
+    if z>4:
+        y+=np.exp(-1/2*z**2+z-4)/np.sqrt(2*np.pi)
+    else:
+        y+=0.5
+estimator=y/N
+
+import scipy.stats
+real=1-scipy.stats.norm(0,1).cdf(4)
+np.abs(real - estimator)
+
+#%%
