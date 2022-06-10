@@ -1,5 +1,4 @@
 #%%
-#%%
 # y 지정1
 
 n=100
@@ -88,11 +87,7 @@ log_lack_sum/(-n)
 
 
 '''
-'''
-'''
 3. real data
-'''
-'''
 '''
 import pandas as pd
 import numpy as np
@@ -144,9 +139,6 @@ left.shape
 mat.shape
 
 #%%
-
-# 이해 완료  ???
-
    def __init__(self, X, y):
         super(BuildModel, self).__init__() # 상속이 이루어지는 부분
         
@@ -192,55 +184,7 @@ theta = tf.stack(theta)[tf.newaxis, :]
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 '''
-
 '''
 
 #%%
@@ -357,14 +301,6 @@ class BuildModel(tf.keras.models.Model): # 부모 class
         mat2 = tf.concat((tf.zeros((self.n, 1)), mat2), axis=-1)
 
         return mat1, mat2, theta
-    
-    # def GOF(self):
-    # hosmer-lemeshow는 로짓에서 쓰이니까 일반적으로 쓰이는 것 개발? -> Lipsitz
-
-    # def kendalls(self):
-    # def std_error(self):
-    # def hess(self):
-    # def visual(self):
 
 #%%
 data = pd.read_csv(r'C:\Users\uos\iCloudDrive\ordinal\bostonhousing_ord.csv')
