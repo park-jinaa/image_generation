@@ -83,15 +83,7 @@ print(history.history['accuracy'])
 # 테스트 데이터 세트로 모델 성능 검증
 model.evaluate(x_test, y_test, batch_size=64)
 #%%
-'''
-GradientTape(그래디언트 테이프)
-텐서플로는 자동 미분(주어진 입력 변수에 대한 연산의 그래디언트(gradient)를 계산하는 것) 을 위한 tf.GradientTape API를 제공
-tf.GradientTape는 context 안에서 실행된 모든 연산을 tape에 기록
-그 다음 텐서플로는 후진 방식 자동 미분(reverse mode differentiation)을 사용해 tape에 "기록된" 연산의 그래디언트를 계산
-gradient 계산 후 weight update
-'''
-
-'''gradient tape (모든 연산을 tape에 기록)
+'''gradient tape
  - exponential'''
 
 lr = 0.1 
