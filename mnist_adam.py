@@ -150,13 +150,3 @@ for i in range(20):
 
 plt.plot(lr_schedule1)
 plt.plot(lr_schedule2)
-
-#%%
-
-# a = [i for i in range(10)] ;a  # 0부터 9까지 숫자를 생성하여 i에 차곡차곡 넣겠고, i를 a라는 리스트에 넣겠다
-# b = [i*5 for i in range(10)];b
-# c = [i for i in range(10) if i%2==0];c #0~9숫자 중에 짝수를 리스트로 생성
-# d = [i+5 for i in range(10) if i%2==1];d # 0~9숫자 중에 홀수에 5를 더해서 리스트 생성
-# e = [i * j for j in range(2,10) for i in range(1,10)]; e #2단부터 9단까지 구구단을 리스트 생성
-# e = [i * j for j in range(2,10)
-#            for i in range(1,10)];e #j가 1일때 i가 2~10까지 반복 쭉쭉    -> 뒤부터 처리함
